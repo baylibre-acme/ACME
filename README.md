@@ -7,15 +7,21 @@ To get the BSP you need to have repo installed and use it as:
 Install the repo utility:
 
 ` $: mkdir ~/bin`
+
 ` $: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo`
+
 ` $: chmod a+x ~/bin/repo`
 
 Download the BSP source:
 
 ` $: PATH=${PATH}:~/bin`
+
 ` $: mkdir acme-bsp`
+
 ` $: cd acme-bsp`
+
 ` $: repo init -u https://github.com/baylibre-acme/ACME`
+
 ` $: repo sync`
 
 At the end of the commands you have every metadata you need to start work with.
@@ -42,7 +48,9 @@ Using a system on the same local LAN network with Avahi or Bonjour installed, te
 
 In order to achieve an SSH connection, shut off the ACME board, connect the SD Card to a computer and copy your SSH Public key as :
 ` $: sudo mkdir /path/to/sdcard/root/home/root/.ssh`
+
 ` $: sudo cp /path/to/home/user/.ssh/id_rsa.pub /path/to/sdcard/root/home/root/.ssh/authorized_keys`
+
 ` $: sudo chmod 700 /path/to/sdcard/root/home/root/.ssh -R`
 
 Unmount the SD Card cleanly, and re-insert it in the ACME system them power it back.
