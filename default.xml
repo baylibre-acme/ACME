@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="baylibre" fetch="ssh://git@github.com/BayLibre-acme" />
+  <remote name="yocto" fetch="git://git.yoctoproject.org" />
+  <remote name="openembedded" fetch="git://github.com/openembedded" />
+  <remote name="koenkooi" fetch="git://github.com/koenkooi" />
+  <remote name="beagleboard" fetch="git://github.com/beagleboard" />
+
+  <default revision="master" remote="baylibre" />
+
+  <project  name="poky" remote="yocto" revision="jethro" />
+  <project  name="meta-baylibre" />
+  <project  name="meta-ti" remote="yocto" revision="jethro" />
+  <project  name="meta-openembedded" path="meta-openembedded" remote="openembedded" revision="jethro" />
+</manifest>
