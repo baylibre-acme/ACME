@@ -42,11 +42,13 @@ Insert the SD Card into the BeagleBone Black slot, connect an ethernet cable to 
 When the LEDs blinks as an heartbeat, the system is up and running.
 
 Using a system on the same local LAN network with Avahi or Bonjour installed, test the system connectivity by pinging the ACME board :
+
 ` $: ping baylibre-acme.local`
 
 ## SSH Access Instructions ##
 
 In order to achieve an SSH connection, shut off the ACME board, connect the SD Card to a computer and copy your SSH Public key as :
+
 ` $: sudo mkdir /path/to/sdcard/root/home/root/.ssh`
 
 ` $: sudo cp /path/to/home/user/.ssh/id_rsa.pub /path/to/sdcard/root/home/root/.ssh/authorized_keys`
@@ -56,6 +58,7 @@ In order to achieve an SSH connection, shut off the ACME board, connect the SD C
 Unmount the SD Card cleanly, and re-insert it in the ACME system them power it back.
 
 Run a standard SSH connection to get a system shell :
+
 ` $: ssh root@baylibre-acme.local`
 
 ## CLI Usage Instructions ##
