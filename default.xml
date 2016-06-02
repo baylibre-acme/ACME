@@ -6,11 +6,11 @@
 
   <default revision="master" remote="baylibre" />
 
-  <project  name="poky" remote="yocto" revision="jethro" />
+  <project  name="poky" remote="yocto" revision="krogoth" />
   <project  name="meta-baylibre">
     <copyfile dest="Makefile" src="Makefile"/>
     <copyfile dest="README.md" src="README.md"/>
   </project>
-  <project  name="meta-ti" remote="yocto" />
-  <project  name="meta-openembedded" path="meta-openembedded" remote="openembedded" revision="jethro" />
+  <project  name="meta-ti" remote="yocto" revision="krogoth" />
+  <project  name="meta-openembedded" path="meta-openembedded" remote="openembedded" revision="krogoth" />
 </manifest>
