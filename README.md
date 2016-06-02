@@ -62,4 +62,6 @@ $: ssh root@baylibre-acme.local
 
 ## CLI Usage Instructions ##
 
-TODO
+The experimenal Network CLI is available at https://github.com/baylibre-acme/acme-cli
+
+The pyacmed server is provided in the lastest ACME Yocto based images and works with this CLI software.
