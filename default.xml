@@ -4,12 +4,12 @@
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
   <remote name="openembedded" fetch="git://github.com/openembedded" />
 
-  <default revision="master" remote="baylibre" />
+  <default revision="krogoth" remote="baylibre" />
 
-  <project  name="poky" remote="yocto" revision="krogoth" />
+  <project  name="poky" remote="yocto" />
   <project  name="meta-baylibre">
-    <copyfile dest="Makefile" src="Makefile"/>
-    <copyfile dest="README.md" src="README.md"/>
+    <linkfile dest="Makefile" src="Makefile"/>
+    <linkfile dest="README.md" src="README.md"/>
   </project>
-  <project  name="meta-openembedded" path="meta-openembedded" remote="openembedded" revision="krogoth" />
+  <project  name="meta-openembedded" remote="openembedded" />
 </manifest>
