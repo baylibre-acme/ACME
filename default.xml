@@ -11,6 +11,5 @@
     <copyfile dest="Makefile" src="Makefile"/>
     <copyfile dest="README.md" src="README.md"/>
   </project>
-  <project  name="meta-ti" remote="yocto" revision="krogoth" />
   <project  name="meta-openembedded" path="meta-openembedded" remote="openembedded" revision="krogoth" />
 </manifest>
