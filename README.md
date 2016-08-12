@@ -1,4 +1,6 @@
-# BayLibre ACME Yocto BSP
+# BayLibre ACME Yocto BSP - Development branch
+
+WARNING: Please use the master branch to have a stable release
 
 ## Build Instruction ##
 
@@ -16,7 +18,7 @@ Download the BSP source:
 $ PATH=${PATH}:~/bin
 $ mkdir acme-bsp
 $ cd acme-bsp
-$ repo init -u https://github.com/baylibre-acme/ACME
+$ repo init -u https://github.com/baylibre-acme/ACME -b next
 $ repo sync
 ```
 
