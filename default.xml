@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="baylibre" fetch="ssh://git@github.com/BayLibre-acme" />
+  <remote name="baylibre" fetch="https://github.com/BayLibre-acme" />
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
-  <remote name="openembedded" fetch="git://github.com/openembedded" />
+  <remote name="openembedded" fetch="https://github.com/openembedded" />
 
   <default revision="krogoth" remote="baylibre" />
 
