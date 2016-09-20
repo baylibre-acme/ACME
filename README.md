@@ -83,5 +83,5 @@ $ minicom -D /dev/ttyACM0
 ```
 or
 ```
-$ minicom -D /dev/ttyACM1
+$ cu -l /dev/ttyACM1
 ```
