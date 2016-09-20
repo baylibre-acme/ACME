@@ -68,6 +68,8 @@ The pyacmed server is provided in the lastest ACME Yocto based images and works 
 
 ## Experimental Features ##
 
+### USB Gadget ###
+
 USB Gadget support has been added to provide a network connectivity over an ECM USB profile with an embedded DHCP server and two console links over an ACM USB profile.
 
 The freshly created network interface (usb0 under linux) will simply work with a DHCP client, and will work like a native Ethernet link.
@@ -85,6 +87,12 @@ or
 ```
 $ cu -l /dev/ttyACM1
 ```
+
+### Probe control via IIO ###
+
+An attribute was added to the INA226 driver called "in_active", it's purpose it to control the probe power throught the IIO library.
+
+The various utilities will be updated to handle this call.
 
 ## How to find my ACME device on the network ##
 
