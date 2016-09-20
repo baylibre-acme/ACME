@@ -85,3 +85,17 @@ or
 ```
 $ cu -l /dev/ttyACM1
 ```
+
+## How to find my ACME device on the network ##
+
+The Acme Beaglebone Black images provides Rendez-Vous/Bonjour/Zeroconf support via the Avahi daemon.
+
+The following are exported :
+ - A entry for ipv4 and ipv6 link-local adresses
+ - SSH port over the "_baylibre_acme._tcp" type
+ - IIO daemon over the "_iio._tcp" type
+ 
+In order to find the devices on the network, simply call :
+```
+$ avahi-browse -r _baylibre_acme._tcp
+```
