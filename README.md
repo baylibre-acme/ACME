@@ -99,3 +99,18 @@ In order to find the devices on the network, simply call :
 ```
 $ avahi-browse -r _baylibre_acme._tcp
 ```
+
+## How to boot with the probes disabled ##
+
+The probe wakeup at boot can be disabled :
+```
+# echo 1 > /etc/acme-iio-wakeup-disable
+```
+or
+```
+# systemctl disable acme-iio-wakeup.service
+```
+then
+```
+# reboot
+```
