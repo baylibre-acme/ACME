@@ -53,11 +53,11 @@ $ sudo cp $HOME/.ssh/id_rsa.pub /path/to/sdcard/root/home/root/.ssh/authorized_k
 $ sudo chmod 700 /path/to/sdcard/root/home/root/.ssh -R
 ```
 
-Unmount the SD Card cleanly, and re-insert it in the ACME system them power it back.
+Unmount the SD Card cleanly, and re-insert it in the ACME system then power it back.
 
 Run a standard SSH connection to get a system shell :
 ```
-$: ssh root@baylibre-acme.local
+$ ssh root@baylibre-acme.local
 ```
 
 ## CLI Usage Instructions ##
@@ -65,3 +65,23 @@ $: ssh root@baylibre-acme.local
 The experimenal Network CLI is available at https://github.com/baylibre-acme/acme-cli
 
 The pyacmed server is provided in the lastest ACME Yocto based images and works with this CLI software.
+
+## Experimental Features ##
+
+USB Gadget support has been added to provide a network connectivity over an ECM USB profile with an embedded DHCP server and two console links over an ACM USB profile.
+
+The freshly created network interface (usb0 under linux) will simply work with a DHCP client, and will work like a native Ethernet link.
+
+```
+$ ssh root@baylibre-acme.local
+```
+
+For the Console links, simply open a terminal emulator over one of the links, ttyACM0 and ttyACM1 under Linux.
+
+```
+$ minicom -D /dev/ttyACM0
+```
+or
+```
+$ minicom -D /dev/ttyACM1
+```
