@@ -110,6 +110,13 @@ end             10.65.34.254    #default: 192.168.0.254
 # systemctl disable acme-usbgadget-udhcpd.service
 ```
 
+#### How to disable the USB gadget interface ####
+
+Simply run :
+```
+# systemctl disable acme-usbgadget-init.service
+```
+
 ### Probe control via IIO ###
 
 An attribute was added to the INA226 driver called "in_active", it's purpose it to control the probe power throught the IIO library.
