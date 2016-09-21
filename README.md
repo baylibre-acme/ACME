@@ -50,18 +50,24 @@ $ ping baylibre-acme.local
 
 ## SSH Access Instructions ##
 
-In order to achieve an SSH connection, shut off the ACME board, connect the SD Card to a computer and copy your SSH Public key as :
-```
-$ sudo mkdir /path/to/sdcard/root/home/root/.ssh
-$ sudo cp $HOME/.ssh/id_rsa.pub /path/to/sdcard/root/home/root/.ssh/authorized_keys
-$ sudo chmod 700 /path/to/sdcard/root/home/root/.ssh -R
-```
+By default, SSH access is open to root user without any passwords.
+This is bad if connected to an unsecure network.
 
-Unmount the SD Card cleanly, and re-insert it in the ACME system then power it back.
-
-Run a standard SSH connection to get a system shell :
+If so, please secure the SSH settings by :
+ - Copying a SSH key to connect using a key instead of a password :
+```
+$ ssh-copy-id root@baylibre-acme.local
+```
+ - Disable authentication by password :
 ```
 $ ssh root@baylibre-acme.local
+# vi /etc/ssh/sshd_config
+Change lines :
+#PasswordAuthentication yes
+PermitEmptyPasswords yes
+to
+PasswordAuthentication no
+PermitEmptyPasswords no 
 ```
 
 ## CLI Usage Instructions ##
