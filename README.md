@@ -1,5 +1,9 @@
 # BayLibre ACME Yocto BSP
 
+## Pre-built releases ##
+
+If you need a pre-built image, please look at : https://github.com/baylibre-acme/ACME/releases
+
 ## Build Instruction ##
 
 To get the BSP you need to have repo installed and use it as:
@@ -88,6 +92,24 @@ or
 $ cu -l /dev/ttyACM1
 ```
 
+#### How to disable the DHCP server on the USB network interface ####
+
+The USB network address is the same on all the ACME boards, if you connect multiple boards to a computer, you will have IP adress conflicts, to solve this situation, you can either :
+ - Change the address range on each ACME BeagleBone by editing the following files :
+```
+# vi /usr/bin/acme-usbgadget-udhcpd
+Change the line :
+ifconfig usb0 up 10.65.34.1 netmask 255.255.255.0
+# vi /etc/udhcpd.conf
+Change the lines :
+start           10.65.34.20     #default: 192.168.0.20
+end             10.65.34.254    #default: 192.168.0.254
+```
+ - Disable the DHCP server by running :
+```
+# systemctl disable acme-usbgadget-udhcpd.service
+```
+
 ### Probe control via IIO ###
 
 An attribute was added to the INA226 driver called "in_active", it's purpose it to control the probe power throught the IIO library.
@@ -111,10 +133,6 @@ $ avahi-browse -r _baylibre_acme._tcp
 ## How to boot with the probes disabled ##
 
 The probe wakeup at boot can be disabled :
-```
-# echo 1 > /etc/acme-iio-wakeup-disable
-```
-or
 ```
 # systemctl disable acme-iio-wakeup.service
 ```
