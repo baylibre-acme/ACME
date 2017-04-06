@@ -7,7 +7,7 @@
   <default revision="krogoth" remote="baylibre" />
 
   <project  name="poky" remote="yocto" />
-  <project  name="meta-baylibre">
+  <project  name="meta-baylibre" revision="cc869a5f6680788320128ee756f5c5672f6d02eb">
     <linkfile dest="Makefile" src="Makefile"/>
     <linkfile dest="README.md" src="README.md"/>
   </project>
