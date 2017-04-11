@@ -7,6 +7,7 @@
   <default revision="krogoth" remote="baylibre" />
 
   <project  name="poky" remote="yocto" />
+  <project  name="meta-raspberrypi" remote="yocto" />
   <project  name="meta-baylibre" revision="krogoth-next">
     <linkfile dest="Makefile" src="Makefile"/>
     <linkfile dest="README.md" src="README.md"/>
