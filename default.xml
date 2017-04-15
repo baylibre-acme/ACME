@@ -3,11 +3,13 @@
   <remote name="baylibre" fetch="https://github.com/BayLibre-acme" />
   <remote name="yocto" fetch="git://git.yoctoproject.org" />
   <remote name="openembedded" fetch="https://github.com/openembedded" />
+  <remote name="meson" fetch="https://github.com/superna9999" />
 
   <default revision="krogoth" remote="baylibre" />
 
   <project  name="poky" remote="yocto" />
   <project  name="meta-raspberrypi" remote="yocto" />
+  <project  name="meta-meson" remote="meson" />
   <project  name="meta-baylibre" revision="krogoth-next">
     <linkfile dest="Makefile" src="Makefile"/>
     <linkfile dest="README.md" src="README.md"/>
